@@ -1,4 +1,4 @@
-function joinus() {
+function Joinus() {
   return(
    <section id="join-us">
     <div className="content">
@@ -11,4 +11,4 @@ function joinus() {
   </section> );
   
 }
-export default joinus;
+export default Joinus;

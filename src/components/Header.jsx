@@ -7,23 +7,7 @@ function Header(){
 
 <a href="#" className="logo">temeyouzi | تميزي</a>
 <ul>
-  <li>
-    <a href="#">الصفحة الرئيسية</a>
 
-  </li>
-   <li>
-    <a href="#">الدروس</a>
-    
-  </li>
-   <li>
-    <a href="#">نتائج باكالوريا 2025</a>
-  </li>
-   <li>
-    <a href="#">نتائج ابريفة 2025</a>
-  </li>
-   <li>
-    <a href="#">نتائج كونكور 2025</a>
-  </li>
 </ul>
 <div className="account">
   <ul>

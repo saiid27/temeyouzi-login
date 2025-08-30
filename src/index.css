@@ -9,20 +9,14 @@
 :root{
   --dark-blue:#252B42;
   --sky-blue:#23A6F8;
-  --light-sky-blue:#B2E3FF;
-  --light-orange:#E77C40;
   --red:#E74040;
   --light-pain:#FFDCD1;
-  --light-gray:#737373;
-  --yellow:#F3CD03;
-  --green:#2DC071;
-  --light-green:#B9EAA8;
 }
 
 body{
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;          /* أصغر */
-  line-height: 1.4;         /* أقرب */
+  font-size: 14px;        /* خط أساسي أصغر */
+  line-height: 1.4;
   background: #fff;
   color: #111;
 }
@@ -32,10 +26,9 @@ a{ text-decoration: none; color: inherit; }
 
 /* Utility */
 .container{
-  max-width: 1000px;        /* أصغر */
-  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1rem;          /* أقل */
+  padding: 0 1rem;
 }
 
 /* Header */
@@ -47,42 +40,47 @@ a{ text-decoration: none; color: inherit; }
   align-items: center;
   max-width: 1000px;
   margin: auto;
-  padding: 0 1rem;         /* أصغر */
-  height: 70px;            /* أقل */
+  padding: 0 1rem;
+  height: 65px;           /* أقصر */
   gap: .5rem;
 }
 
-.navbar a { color: #fff; font-size: 14px; }  /* خط أصغر */
+.navbar a { color: #fff; font-size: 13px; }
 
 .navbar .logo {
-  font-size: 18px;         /* أصغر */
+  font-size: 18px;
   font-weight: 600;
 }
 
+/* روابط */
 .navbar ul {
   display: flex;
   align-items: center;
-  gap: .3rem;
+  gap: .5rem;
 }
 
 .navbar ul li a{
   margin: 0 6px;
   font-weight: 500;
-  font-size: 13px;         /* أصغر */
-  transition: color .3s ease;
+  font-size: 13px;
+  padding: 4px 6px;      /* مساحة لمس بسيطة */
+  border-radius: 3px;
 }
 
 .navbar ul li a:hover{ color: var(--red); }
 
+/* زر الاشتراك */
 .navbar .account .btn-join{
   background-color: var(--sky-blue);
-  padding: 6px 14px;       /* أصغر */
+  padding: 8px 14px;
   margin-left: 15px;
   border-radius: 4px;
-  font-size: 12px;         /* أصغر */
+  font-size: 12px;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-height: 36px;       /* يضمن وضوح الزر */
 }
 
 .navbar .account .btn-join svg{
@@ -94,7 +92,6 @@ a{ text-decoration: none; color: inherit; }
 .hamburger {
   display: none;
   flex-direction: column;
-  justify-content: center;
   gap: 3px;
   cursor: pointer;
   background: transparent;
@@ -102,7 +99,7 @@ a{ text-decoration: none; color: inherit; }
   padding: 4px;
 }
 .hamburger span {
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: #fff;
   border-radius: 2px;
@@ -111,44 +108,38 @@ a{ text-decoration: none; color: inherit; }
 /* Home */
 #home{
   background-color: var(--dark-blue);
-  padding: 3rem 0;        /* أقل */
+  padding: 3rem 0;
 }
 
 #home .home-header {
   text-align: center;
   color: #fff;
-  max-width: 380px;       /* أصغر */
+  max-width: 360px;
   margin: auto;
   padding: 0 .5rem;
 }
 
-#home .home-header span{
-  color: var(--red);
-  font-weight: 600;
-  font-size: 13px;
-}
-
 #home .home-header h1{
-  font-size: 26px;        /* أصغر */
+  font-size: 24px;
   font-weight: 600;
-  margin: 14px 0;
+  margin: 12px 0;
   color: var(--light-pain);
 }
 #home .home-header p{
   margin-bottom: 20px;
   color: var(--light-pain);
-  line-height: 1.4;
   font-size: 13px;
+  line-height: 1.4;
 }
 
 #home .home-header .btn{
-  padding: 6px 16px;
+  padding: 8px 16px;
   border-radius: 4px;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 12px;
   border: 1px solid var(--red);
-  margin: 0 3px 8px;
+  margin: 0 4px 8px;
   display: inline-block;
+  min-height: 36px;     /* زر واضح */
 }
 #home .home-header .btn.btn-red{
   color: #fff;
@@ -162,18 +153,17 @@ a{ text-decoration: none; color: inherit; }
 /* Sections */
 #join-us, #sd{
   background-color: var(--dark-blue);
-  padding: 3rem 0;         /* أقل */
+  padding: 3rem 0;
 }
 #join-us .content, #sd{
   max-width: 600px;
-  width: 100%;
   margin: auto;
   text-align: center;
   color: #fff;
   padding: 0 .5rem;
 }
 #join-us .content .h2{
-  font-size: 22px;         /* أصغر */
+  font-size: 20px;
   margin: 10px 0;
 }
 
@@ -202,8 +192,6 @@ a{ text-decoration: none; color: inherit; }
     margin-left: 0;
     width: 100%;
     max-width: 220px;
-    padding: 8px 12px;
-    font-size: 11px;
   }
 }
 
@@ -218,8 +206,6 @@ a{ text-decoration: none; color: inherit; }
     width: 100%;
     max-width: 260px;
     margin: 6px auto;
-    padding: 8px 12px;
-    font-size: 11px;
   }
 
   #join-us .content .h2{ font-size: 18px; }

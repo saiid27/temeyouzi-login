@@ -19,9 +19,7 @@
   --light-green:#B9EAA8;
 }
 
-html, body{
-  height: 100%;
-}
+html, body{ height: 100%; }
 
 body{
   font-family: "Montserrat", sans-serif;
@@ -75,7 +73,7 @@ p{ line-height: 1.6; }
 .navbar ul li a{
   margin: 0 10px;
   font-weight: 500;
-  transition: color .3s ease; /* fixed 0,3s */
+  transition: color .3s ease;
 }
 
 .navbar ul li a:hover{ color: var(--red); }
@@ -83,7 +81,7 @@ p{ line-height: 1.6; }
 .navbar .account .btn-join{
   background-color: var(--sky-blue);
   padding: 10px 20px;
-  margin-left: 25px; /* fixed margin: left */
+  margin-left: 25px;
   border-radius: 5px;
   text-transform: uppercase;
   display: inline-flex;
@@ -95,6 +93,23 @@ p{ line-height: 1.6; }
   font-size: 12px;
   margin-left: 5px;
   vertical-align: middle;
+}
+
+/* زر الهمبرغر */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
 }
 
 /* Home */
@@ -152,7 +167,6 @@ p{ line-height: 1.6; }
   padding: 6rem 0;
 }
 #join-us .content{
-  /* removed min-width for mobile */
   max-width: 700px;
   width: 100%;
   margin: auto;
@@ -168,7 +182,6 @@ p{ line-height: 1.6; }
 #sd {
   background-color: var(--dark-blue);
   padding: 6rem 0;
-  /* removed min-width for mobile */
   max-width: 700px;
   width: 100%;
   margin: auto;
@@ -193,34 +206,24 @@ p{ line-height: 1.6; }
 }
 
 /* Phones */
-@media (max-width: 576px){
-  .navbar{
+@media (max-width: 768px){
+  .hamburger { display: flex; margin-left: auto; }
+
+  .navbar ul {
+    display: none;
     flex-direction: column;
-    align-items: stretch;
-    gap: .75rem;
-    padding: .75rem 1rem;
-    background: var(--dark-blue);
-  }
-
-  .navbar .logo{
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .navbar ul{
     width: 100%;
-    justify-content: center;
-    gap: .25rem .5rem;
+    background: var(--dark-blue);
+    padding: 10px 0;
   }
 
-  .navbar ul li a{
-    margin: .25rem .5rem;
-    font-size: 14px;
-  }
+  .navbar ul.show { display: flex; }
 
   .navbar .account{
+    width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
   }
 
   .navbar .account .btn-join{
@@ -230,7 +233,9 @@ p{ line-height: 1.6; }
     padding: 12px 16px;
     font-size: 12px;
   }
+}
 
+@media (max-width: 576px){
   #home{ padding: 3rem 0; }
 
   #home .home-header{
@@ -258,12 +263,8 @@ p{ line-height: 1.6; }
     font-size: 13px;
   }
 
-  #join-us, #sd{
-    padding: 3.5rem 0;
-  }
-  #join-us .content .h2{
-    font-size: 24px;
-  }
+  #join-us, #sd{ padding: 3.5rem 0; }
+  #join-us .content .h2{ font-size: 24px; }
 }
 
 /* Very small phones */

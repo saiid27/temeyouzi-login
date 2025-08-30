@@ -1,6 +1,6 @@
 
 import Home from "./Home";
-import Joinus from "./joinus";
+import Joinus from "./Joinus.jsx";
 function Main(){
   return(
    <main>

@@ -1,113 +1,178 @@
-/* ====== Responsive Scale like the screenshot (ADD-ONLY) ====== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* اجعل النص والمسافات تتدرّج تلقائياً حسب العرض */
-html, body { overflow-x: hidden; }
-img, svg { max-width: 100%; height: auto; display: block; }
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
 
 :root{
-  /* سلم مسافات مرن */
-  --sp-1: clamp(6px, 0.6vw, 10px);
-  --sp-2: clamp(10px, 1vw, 16px);
-  --sp-3: clamp(14px, 1.6vw, 22px);
-  --sp-4: clamp(20px, 2.4vw, 32px);
-  --sp-5: clamp(28px, 3.5vw, 48px);
+  --dark-blue:#252B42;
+  --sky-blue:#23A6F8;
+  --light-sky-blue:#B2E3FF;
+  --light-orange:#E77C40;
+  --red:#E74040;
+  --light-pain:#FFDCD1;
+  --light-gray:#737373;
+  --yellow:#F3CD03;
+  --green:#2DC071;
+  --light-green:#B9EAA8;
 
-  /* أحجام خط مرنة */
-  --fs-xs: clamp(11px, 0.9vw, 12.5px);
-  --fs-sm: clamp(12px, 1.1vw, 14px);
-  --fs-md: clamp(13.5px, 1.3vw, 16px);
-  --fs-lg: clamp(18px, 2.4vw, 22px);
-  --fs-xl: clamp(22px, 3.2vw, 28px);
-  --fs-xxl: clamp(26px, 5vw, 44px); /* للـ Hero */
+
+
+
 }
 
-/* حاوية مرنة تشبه المواقع النظيفة */
+
+body{
+   font-family: "Montserrat", sans-serif;
+   font-size: 16px;
+}
+
+ul{
+list-style: none;
+
+}
+
+a{
+  text-decoration: none;
+}
+p{
+  line-height: 1.4;
+}
+
+/** Utility classes */
 .container{
-  max-width: min(1120px, 96vw);
-  padding-left: clamp(12px, 2vw, 24px);
-  padding-right: clamp(12px, 2vw, 24px);
+  max-width: 1100px;
+ 
+  margin: auto;
+  padding: 0 2rem;
 }
 
-/* رأس الموقع أنحف ومتناسق */
+/** Header start */
+#header {
+background-color: var(--dark-blue);
+}
 .navbar{
-  height: auto;
-  min-height: clamp(56px, 7vw, 72px);
-  padding-left: clamp(12px, 2vw, 24px);
-  padding-right: clamp(12px, 2vw, 24px);
-  gap: var(--sp-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+max-width: 1100px;
+margin: auto;
+padding: 0 2rem;
+height: 100px;
 }
-.navbar .logo{ font-size: var(--fs-lg); }
-.navbar a{ font-size: var(--fs-sm); }
+.navbar a {
+  color: #fff;
+}
 
-/* زر الاشتراك واضح لكن خفيف */
+.navbar .logo {
+font-size: 24px;
+font-weight: 600;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li a {
+margin: 0 10px;
+font-weight: 500;
+transition: all 0,3s ease;
+}
+.navbar ul li a:hover{
+  color: var(--red);
+}
 .navbar .account .btn-join{
-  font-size: var(--fs-sm);
-  padding: clamp(6px, 1.2vw, 10px) clamp(10px, 2vw, 16px);
-  min-height: clamp(32px, 5.2vw, 40px);
-  border-radius: 8px;
+  background-color: var(--sky-blue);
+  padding: 10px 20px;
+  margin: left 25px;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
-
-/* زر الهمبرغر أصغر ومتناسق */
-.hamburger{ padding: 6px; }
-.hamburger span{
-  width: clamp(18px, 3.2vw, 22px);
-  height: 2px;
+.navbar .account .btn-join svg{
+  font-size: 12px;
+  margin-left: 5px;
+  vertical-align: middle;
 }
+/** Header End */
 
-/* قسم الهيرو مثل المعاينة: مساحة هواء وعنوان كبير جميل */
+/** main start  */
+/** home start  */
 #home{
-  padding-top: var(--sp-5);
-  padding-bottom: var(--sp-5);
+  background-color: var(--dark-blue);
+  padding: 5rem 0;
 }
-#home .home-header{ max-width: min(680px, 92vw); }
-#home .home-header span{ font-size: var(--fs-sm); }
+
+#home .home-header {
+  text-align: center;
+  color: #fff;
+  max-width: 450px;
+  
+  margin: auto;
+}
+
+#home .home-header span{
+  color: var(--red);
+  font-weight: 600;
+
+}
+
 #home .home-header h1{
-  font-size: var(--fs-xxl);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: var(--sp-2) 0 var(--sp-3);
+  font-size: 40px;
+  font-weight: 600;
+  margin: 20px 0;
+  color: var(--light-pain);
 }
 #home .home-header p{
-  font-size: var(--fs-md);
+  margin-bottom : 30px;
+  color: var(--light-pain);
   line-height: 1.6;
-  margin-bottom: var(--sp-3);
-  opacity: .95;
 }
 
-/* أزرار الهيرو واضحة وقابلة للمس */
 #home .home-header .btn{
-  font-size: var(--fs-sm);
-  padding: clamp(8px, 1.8vw, 12px) clamp(14px, 3vw, 20px);
-  min-height: clamp(34px, 6vw, 42px);
-  border-radius: 10px;
-  margin: 0 var(--sp-1) var(--sp-2);
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--red);
+  margin: 0 5px;
+}
+#home .home-header .btn.btn-red{
+  color: #fff;
+  background-color: var(--red);
+}
+#home .home-header .btn.btn-transparent{
+  background-color: transparent;
+  color: var(--red);
 }
 
-/* العناوين في الأقسام الأخرى أصغر قليلاً لكن متناسقة */
+/** tari  */
+#join-us{
+  background-color: var(--dark-blue);
+  padding: 6rem 0;
+}
+#join-us .content{
+  min-width: 600px;
+
+  margin: auto;
+text-align: center;
+color: #fff;
+
+}
 #join-us .content .h2{
-  font-size: var(--fs-xl);
-  margin: var(--sp-2) 0;
+  font-size: 35px;
+  margin: 15px 0;
 }
+/** kzane footer  */
+#sd {
+    background-color: var(--dark-blue);
+  padding: 6rem 0;
+    min-width: 600px;
 
-/* مسافات الأقسام أقصر على الشاشات الصغيرة وأكبر على الكبيرة */
-#join-us, #sd{
-  padding-top: var(--sp-5);
-  padding-bottom: var(--sp-5);
+  margin: auto;
+text-align: center;
+color: #fff;
+
 }
-
-/* قائمة الموبايل: تباعد مريح وروابط قابلة للمس */
-@media (max-width: 768px){
-  .navbar ul{
-    padding: var(--sp-2) 0;
-    gap: var(--sp-1);
-  }
-  .navbar ul li a{
-    font-size: var(--fs-md);
-    padding: var(--sp-1) var(--sp-2);
-  }
-  .navbar .account{ margin-top: var(--sp-1); }
-  .navbar .account .btn-join{ width: 100%; max-width: 260px; }
-}
-
-/* اتجاه RTL: اجعل الهوامش منطقية إن كانت صفحتك عربية */
-html[dir="rtl"] .navbar .account .btn-join{ margin-left: 0; margin-right: 15px; }
+/** home End */
+/** main End */

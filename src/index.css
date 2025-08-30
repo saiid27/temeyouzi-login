@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root{
@@ -18,86 +17,87 @@ box-sizing: border-box;
   --yellow:#F3CD03;
   --green:#2DC071;
   --light-green:#B9EAA8;
-
-
-
-
 }
 
+html, body{
+  height: 100%;
+}
 
 body{
-   font-family: "Montserrat", sans-serif;
-   font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  color: #111;
 }
 
-ul{
-list-style: none;
+ul{ list-style: none; }
+a{ text-decoration: none; color: inherit; }
+p{ line-height: 1.6; }
 
-}
-
-a{
-  text-decoration: none;
-}
-p{
-  line-height: 1.4;
-}
-
-/** Utility classes */
+/* Utility */
 .container{
   max-width: 1100px;
- 
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
-/** Header start */
-#header {
-background-color: var(--dark-blue);
-}
+/* Header */
+#header { background-color: var(--dark-blue); }
+
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-max-width: 1100px;
-margin: auto;
-padding: 0 2rem;
-height: 100px;
-}
-.navbar a {
-  color: #fff;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  height: 100px;
+  gap: 1rem;
 }
 
+.navbar a { color: #fff; }
+
 .navbar .logo {
-font-size: 24px;
-font-weight: 600;
+  font-size: 24px;
+  font-weight: 600;
+  white-space: nowrap;
 }
+
 .navbar ul {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
 }
-.navbar ul li a {
-margin: 0 10px;
-font-weight: 500;
-transition: all 0,3s ease;
+
+.navbar ul li a{
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color .3s ease; /* fixed 0,3s */
 }
-.navbar ul li a:hover{
-  color: var(--red);
-}
+
+.navbar ul li a:hover{ color: var(--red); }
+
 .navbar .account .btn-join{
   background-color: var(--sky-blue);
   padding: 10px 20px;
-  margin: left 25px;
+  margin-left: 25px; /* fixed margin: left */
   border-radius: 5px;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .navbar .account .btn-join svg{
   font-size: 12px;
   margin-left: 5px;
   vertical-align: middle;
 }
-/** Header End */
 
-/** main start  */
-/** home start  */
+/* Home */
 #home{
   background-color: var(--dark-blue);
   padding: 5rem 0;
@@ -107,14 +107,13 @@ transition: all 0,3s ease;
   text-align: center;
   color: #fff;
   max-width: 450px;
-  
   margin: auto;
+  padding: 0 1rem;
 }
 
 #home .home-header span{
   color: var(--red);
   font-weight: 600;
-
 }
 
 #home .home-header h1{
@@ -124,7 +123,7 @@ transition: all 0,3s ease;
   color: var(--light-pain);
 }
 #home .home-header p{
-  margin-bottom : 30px;
+  margin-bottom: 30px;
   color: var(--light-pain);
   line-height: 1.6;
 }
@@ -135,7 +134,8 @@ transition: all 0,3s ease;
   font-size: 12px;
   font-weight: 500;
   border: 1px solid var(--red);
-  margin: 0 5px;
+  margin: 0 5px 10px;
+  display: inline-block;
 }
 #home .home-header .btn.btn-red{
   color: #fff;
@@ -146,33 +146,128 @@ transition: all 0,3s ease;
   color: var(--red);
 }
 
-/** tari  */
+/* Sections */
 #join-us{
   background-color: var(--dark-blue);
   padding: 6rem 0;
 }
 #join-us .content{
-  min-width: 600px;
-
+  /* removed min-width for mobile */
+  max-width: 700px;
+  width: 100%;
   margin: auto;
-text-align: center;
-color: #fff;
-
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
 }
 #join-us .content .h2{
   font-size: 35px;
   margin: 15px 0;
 }
-/** kzane footer  */
+
 #sd {
-    background-color: var(--dark-blue);
+  background-color: var(--dark-blue);
   padding: 6rem 0;
-    min-width: 600px;
-
+  /* removed min-width for mobile */
+  max-width: 700px;
+  width: 100%;
   margin: auto;
-text-align: center;
-color: #fff;
-
+  text-align: center;
+  color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-/** home End */
-/** main End */
+
+/* ========== Responsive ========== */
+
+/* Tablets */
+@media (max-width: 992px){
+  .navbar{
+    padding: 0 1rem;
+    height: auto;
+    min-height: 72px;
+  }
+  .container{ padding: 0 1rem; }
+  #home{ padding: 4rem 0; }
+  #home .home-header h1{ font-size: 34px; }
+}
+
+/* Phones */
+@media (max-width: 576px){
+  .navbar{
+    flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
+    padding: .75rem 1rem;
+    background: var(--dark-blue);
+  }
+
+  .navbar .logo{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .navbar ul{
+    width: 100%;
+    justify-content: center;
+    gap: .25rem .5rem;
+  }
+
+  .navbar ul li a{
+    margin: .25rem .5rem;
+    font-size: 14px;
+  }
+
+  .navbar .account{
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar .account .btn-join{
+    margin-left: 0;
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  #home{ padding: 3rem 0; }
+
+  #home .home-header{
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  #home .home-header h1{
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 12px 0;
+  }
+
+  #home .home-header p{
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  #home .home-header .btn{
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 8px auto;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+  #join-us, #sd{
+    padding: 3.5rem 0;
+  }
+  #join-us .content .h2{
+    font-size: 24px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px){
+  .navbar ul li a{ font-size: 13px; }
+  #home .home-header h1{ font-size: 22px; }
+}

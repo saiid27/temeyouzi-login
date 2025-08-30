@@ -19,26 +19,23 @@
   --light-green:#B9EAA8;
 }
 
-html, body{ height: 100%; }
-
 body{
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;          /* أصغر */
+  line-height: 1.4;         /* أقرب */
   background: #fff;
   color: #111;
 }
 
 ul{ list-style: none; }
 a{ text-decoration: none; color: inherit; }
-p{ line-height: 1.6; }
 
 /* Utility */
 .container{
-  max-width: 1100px;
+  max-width: 1000px;        /* أصغر */
   width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;          /* أقل */
 }
 
 /* Header */
@@ -48,31 +45,30 @@ p{ line-height: 1.6; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
-  padding: 0 2rem;
-  height: 100px;
-  gap: 1rem;
+  padding: 0 1rem;         /* أصغر */
+  height: 70px;            /* أقل */
+  gap: .5rem;
 }
 
-.navbar a { color: #fff; }
+.navbar a { color: #fff; font-size: 14px; }  /* خط أصغر */
 
 .navbar .logo {
-  font-size: 24px;
+  font-size: 18px;         /* أصغر */
   font-weight: 600;
-  white-space: nowrap;
 }
 
 .navbar ul {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: .5rem;
+  gap: .3rem;
 }
 
 .navbar ul li a{
-  margin: 0 10px;
+  margin: 0 6px;
   font-weight: 500;
+  font-size: 13px;         /* أصغر */
   transition: color .3s ease;
 }
 
@@ -80,19 +76,18 @@ p{ line-height: 1.6; }
 
 .navbar .account .btn-join{
   background-color: var(--sky-blue);
-  padding: 10px 20px;
-  margin-left: 25px;
-  border-radius: 5px;
+  padding: 6px 14px;       /* أصغر */
+  margin-left: 15px;
+  border-radius: 4px;
+  font-size: 12px;         /* أصغر */
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
 
 .navbar .account .btn-join svg{
-  font-size: 12px;
-  margin-left: 5px;
-  vertical-align: middle;
+  font-size: 10px;
+  margin-left: 4px;
 }
 
 /* زر الهمبرغر */
@@ -100,14 +95,15 @@ p{ line-height: 1.6; }
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  gap: 3px;
   cursor: pointer;
   background: transparent;
   border: 0;
+  padding: 4px;
 }
 .hamburger span {
-  width: 25px;
-  height: 3px;
+  width: 20px;
+  height: 2px;
   background: #fff;
   border-radius: 2px;
 }
@@ -115,41 +111,43 @@ p{ line-height: 1.6; }
 /* Home */
 #home{
   background-color: var(--dark-blue);
-  padding: 5rem 0;
+  padding: 3rem 0;        /* أقل */
 }
 
 #home .home-header {
   text-align: center;
   color: #fff;
-  max-width: 450px;
+  max-width: 380px;       /* أصغر */
   margin: auto;
-  padding: 0 1rem;
+  padding: 0 .5rem;
 }
 
 #home .home-header span{
   color: var(--red);
   font-weight: 600;
+  font-size: 13px;
 }
 
 #home .home-header h1{
-  font-size: 40px;
+  font-size: 26px;        /* أصغر */
   font-weight: 600;
-  margin: 20px 0;
+  margin: 14px 0;
   color: var(--light-pain);
 }
 #home .home-header p{
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: var(--light-pain);
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 13px;
 }
 
 #home .home-header .btn{
-  padding: 10px 30px;
-  border-radius: 5px;
-  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 11px;
   font-weight: 500;
   border: 1px solid var(--red);
-  margin: 0 5px 10px;
+  margin: 0 3px 8px;
   display: inline-block;
 }
 #home .home-header .btn.btn-red{
@@ -162,50 +160,24 @@ p{ line-height: 1.6; }
 }
 
 /* Sections */
-#join-us{
+#join-us, #sd{
   background-color: var(--dark-blue);
-  padding: 6rem 0;
+  padding: 3rem 0;         /* أقل */
 }
-#join-us .content{
-  max-width: 700px;
+#join-us .content, #sd{
+  max-width: 600px;
   width: 100%;
   margin: auto;
   text-align: center;
   color: #fff;
-  padding: 0 1rem;
+  padding: 0 .5rem;
 }
 #join-us .content .h2{
-  font-size: 35px;
-  margin: 15px 0;
-}
-
-#sd {
-  background-color: var(--dark-blue);
-  padding: 6rem 0;
-  max-width: 700px;
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  color: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-size: 22px;         /* أصغر */
+  margin: 10px 0;
 }
 
 /* ========== Responsive ========== */
-
-/* Tablets */
-@media (max-width: 992px){
-  .navbar{
-    padding: 0 1rem;
-    height: auto;
-    min-height: 72px;
-  }
-  .container{ padding: 0 1rem; }
-  #home{ padding: 4rem 0; }
-  #home .home-header h1{ font-size: 34px; }
-}
-
-/* Phones */
 @media (max-width: 768px){
   .hamburger { display: flex; margin-left: auto; }
 
@@ -214,7 +186,7 @@ p{ line-height: 1.6; }
     flex-direction: column;
     width: 100%;
     background: var(--dark-blue);
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   .navbar ul.show { display: flex; }
@@ -223,52 +195,37 @@ p{ line-height: 1.6; }
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 6px;
   }
 
   .navbar .account .btn-join{
     margin-left: 0;
     width: 100%;
-    max-width: 280px;
-    padding: 12px 16px;
-    font-size: 12px;
+    max-width: 220px;
+    padding: 8px 12px;
+    font-size: 11px;
   }
 }
 
 @media (max-width: 576px){
-  #home{ padding: 3rem 0; }
+  #home{ padding: 2rem 0; }
 
-  #home .home-header{
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  #home .home-header h1{
-    font-size: 26px;
-    line-height: 1.25;
-    margin: 12px 0;
-  }
-
-  #home .home-header p{
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
+  #home .home-header h1{ font-size: 20px; margin: 10px 0; }
+  #home .home-header p{ font-size: 12px; }
 
   #home .home-header .btn{
     display: block;
     width: 100%;
-    max-width: 320px;
-    margin: 8px auto;
-    padding: 12px 18px;
-    font-size: 13px;
+    max-width: 260px;
+    margin: 6px auto;
+    padding: 8px 12px;
+    font-size: 11px;
   }
 
-  #join-us, #sd{ padding: 3.5rem 0; }
-  #join-us .content .h2{ font-size: 24px; }
+  #join-us .content .h2{ font-size: 18px; }
 }
 
-/* Very small phones */
 @media (max-width: 360px){
-  .navbar ul li a{ font-size: 13px; }
-  #home .home-header h1{ font-size: 22px; }
+  .navbar ul li a{ font-size: 12px; }
+  #home .home-header h1{ font-size: 18px; }
 }

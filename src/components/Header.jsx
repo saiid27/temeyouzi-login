@@ -7,10 +7,7 @@ function Header(){
 
 <a href="#" className="logo">temeyouzi | تميزي</a>
 <ul>
-  <li>
-    <a href="#">الصفحة الرئيسية</a>
-
-  </li>
+ 
 
 </ul>
 <div className="account">

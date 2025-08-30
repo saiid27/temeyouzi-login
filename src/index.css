@@ -6,8 +6,7 @@
 html{ scroll-behavior:smooth; }
 body{
   font-family:"Montserrat",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  font-size:16px; line-height:1.6; color:#111;
-  background:#fff;
+  font-size:16px; line-height:1.6; color:#111; background:#fff;
 }
 img{ max-width:100%; display:block; height:auto; }
 ul{ list-style:none; }
@@ -37,14 +36,22 @@ a{ text-decoration:none; color:inherit; }
 
 /* ====== Header ====== */
 #header{ background:var(--dark-blue); position:sticky; top:0; z-index:10; }
+
 .navbar{
   display:flex; align-items:center; justify-content:space-between;
-  height:72px; gap:12px;
+  gap:12px;
+  height:72px;
   max-width:1100px; margin:auto; padding:0 2rem;
 }
-.navbar a{ color:#fff; }
-.logo{ font-size:clamp(18px,2.5vw,24px); font-weight:700; }
 
+.navbar a{ color:#fff; }
+
+/* الشعار */
+.logo{
+  font-size:clamp(18px,2.5vw,24px); font-weight:700;
+}
+
+/* القائمة (حتى لو كانت فاضية الآن) */
 .navbar ul{
   display:flex; gap:10px; flex-wrap:wrap; align-items:center;
 }
@@ -55,18 +62,23 @@ a{ text-decoration:none; color:inherit; }
 }
 .navbar ul li a:hover{ color:var(--red); background:rgba(255,255,255,.06); }
 
-.account{ display:flex; align-items:center; gap:8px; }
-.account .login{
-  display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px;
+/* الحساب */
+.account{ display:flex; align-items:center; }
+.account ul{ display:flex; align-items:center; gap:10px; }
+
+.account a{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:8px 12px; border-radius:8px; font-size:14px; font-weight:600;
+  color:#fff;
 }
-.btn-join{
-  display:inline-block; background:var(--sky-blue); color:#fff;
+.account .btn-join{
+  background:var(--sky-blue); color:#fff;
   padding:8px 14px; border-radius:8px; font-weight:700; font-size:14px;
   transition:filter .2s ease;
 }
-.btn-join:hover{ filter:brightness(1.07); }
+.account .btn-join:hover{ filter:brightness(1.07); }
 
-/* ====== Main: Home ====== */
+/* ====== Main: Home (اختياري إن كان لديك هذا القسم) ====== */
 #home{ background:var(--dark-blue); padding:4rem 0; }
 #home .home-header{
   color:#fff; text-align:center; max-width:700px; width:100%;
@@ -89,7 +101,7 @@ a{ text-decoration:none; color:inherit; }
 #home .home-header .btn.btn-red{ background:var(--red); color:#fff; }
 #home .home-header .btn.btn-transparent{ background:transparent; color:var(--red); }
 
-/* ====== Join Us ====== */
+/* ====== Join Us (اختياري) ====== */
 #join-us{ background:var(--dark-blue); padding:4.5rem 0; }
 #join-us .content{
   max-width:800px; width:100%; margin:auto; text-align:center; color:#fff; padding:0 1rem;
@@ -97,7 +109,7 @@ a{ text-decoration:none; color:inherit; }
 #join-us .content .h2{ font-size:clamp(20px,4.5vw,35px); font-weight:800; margin:12px 0; }
 #join-us .content p{ color:#e9eef5; }
 
-/* ====== SD / Footer-like section ====== */
+/* ====== SD / Footer-like section (اختياري) ====== */
 #sd{
   background:var(--dark-blue); padding:4.5rem 0;
   max-width:900px; width:100%; margin:auto; text-align:center; color:#fff; padding-left:1rem; padding-right:1rem;
@@ -105,40 +117,51 @@ a{ text-decoration:none; color:inherit; }
 #sd .h3{ font-size:clamp(18px,4vw,28px); font-weight:800; margin-bottom:10px; }
 #sd p{ color:#e9eef5; }
 
-/* ====== Cards (اختياري لو احتجت) ====== */
-.card{
-  background:#fff; border:1px solid var(--border); border-radius:12px;
-  padding:16px; box-shadow:0 8px 20px rgba(0,0,0,.05);
-}
-.card.dark{ background:#0e1726; color:#e5e7eb; border-color:#1f2937; }
-
-/* ====== Buttons (اختياري عام) ====== */
-.btn{
-  display:inline-block; padding:10px 16px; border-radius:8px;
-  background:#111; color:#fff; border:1px solid transparent; font-weight:700; cursor:pointer;
-}
+/* ====== Helpers (اختياري) ====== */
+.btn{ display:inline-block; padding:10px 16px; border-radius:8px; background:#111; color:#fff; border:1px solid transparent; font-weight:700; cursor:pointer; }
 .btn.outline{ background:transparent; color:#111; border-color:#111; }
 .btn.sky{ background:var(--sky-blue); }
 .btn.red{ background:var(--red); }
-
-/* ====== Spacing helpers (اختياري) ====== */
 .mt-1{ margin-top:.5rem; } .mt-2{ margin-top:1rem; } .mt-3{ margin-top:1.5rem; }
 .mb-1{ margin-bottom:.5rem; } .mb-2{ margin-bottom:1rem; } .mb-3{ margin-bottom:1.5rem; }
 
 /* ====== Responsive ====== */
+/* تابلت */
 @media (max-width:992px){
   .navbar{ padding:0 1rem; height:68px; }
   .navbar ul{ justify-content:center; }
 }
+
+/* موبايل */
 @media (max-width:768px){
-  .navbar{ gap:8px; }
-  .account{ display:none; } /* لتخفيف الزحام على الموبايل */
+  .navbar{
+    height:auto;          /* لا تثبّت الارتفاع */
+    padding:10px 16px;
+    flex-wrap:wrap;       /* اسمح للعناصر أن تلتف لسطر جديد */
+    gap:10px;
+  }
+
+  /* اجعل قسم الحساب يظهر ويتمركز تحت الشعار/القائمة */
+  .account{
+    order:3;              /* ينزل بعد بقية العناصر */
+    width:100%;
+    justify-content:center;
+  }
+
+  .account a{
+    font-size:13px;
+    padding:8px 12px;
+  }
+
   #home{ padding:3.2rem 0; }
 }
+
+/* شاشات أصغر جداً */
 @media (max-width:480px){
-  .navbar{ height:64px; }
+  .navbar{ height:auto; }
   .logo{ font-size:18px; }
   .navbar ul{ gap:6px; }
   .navbar ul li a{ padding:8px 8px; }
   #home .home-header .btn{ width:100%; }
+  .account a{ padding:7px 10px; }
 }

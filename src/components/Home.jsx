@@ -19,7 +19,7 @@ function Home(){
         </div>
       </section>
 
-      {/* 5) SD (CTA خفيف/معلومة) */}
+      {/* 2) SD (CTA خفيف/معلومة) */}
       <section id="sd">
         <div className="container">
           <div className="h3">نتائج باكالوريا2025 </div>
@@ -29,7 +29,7 @@ function Home(){
           </div>
         </div>
       </section>
-      {/* 5) SD (CTA خفيف/معلومة) */}
+      {/* 3) SD (CTA خفيف/معلومة) */}
       <section id="sd">
         <div className="container">
           <div className="h3">نتائج باكالوريا2025 الد </div>
@@ -39,7 +39,7 @@ function Home(){
           </div>
         </div>
       </section>
-      {/* 6) SD (CTA خفيف/معلومة) */}
+      {/* 4) SD (CTA خفيف/معلومة) */}
      <section id="sd">
         <div className="container">
           <div className="h3">نتائج إبريفة2025 </div>
@@ -49,7 +49,7 @@ function Home(){
           </div>
         </div>
       </section>
-       {/* 7) SD (CTA خفيف/معلومة) */}
+       {/* 5) SD (CTA خفيف/معلومة) */}
      <section id="sd">
         <div className="container">
           <div className="h3">نتائج كونكور 2025 </div>
@@ -60,7 +60,7 @@ function Home(){
         </div>
       </section>
 
-      {/* 3) JOIN US */}
+      {/* 6) JOIN US */}
       <section id="join-us">
         <div className="container">
           <div className="content">

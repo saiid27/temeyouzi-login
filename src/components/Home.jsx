@@ -60,7 +60,14 @@ function Home(){
         </div>
       </section>
 
-     
+        <section id="gh">
+    <div className="fg">
+        
+      <img  src="les-prof.jpg" alt="go"  className="prof-img"/>
+       
+    </div>
+    
+  </section> 
     </>
   );
 }

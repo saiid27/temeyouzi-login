@@ -60,21 +60,6 @@ function Home(){
         </div>
       </section>
 
-      {/* 6) JOIN US */}
-      <section id="sd">
-        <div className="container">
-          <div className="content">
-            <div className="h3">  امتحانات سابقة </div>
-            <p>  brévet 2016 , Bac 2016 ....bac 2024 , brévet 2024</p>
-            <div className="mt-2">
-              <a href="#" className="btn sky">دخول </a>
-             
-            </div>
-
-          </div>
-        </div>
-      </section>
-      
      
     </>
   );

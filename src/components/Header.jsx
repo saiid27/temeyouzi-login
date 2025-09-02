@@ -8,10 +8,8 @@ function Header(){
 
 <a href="#" className="logo"> تميزي | temeyouzi</a>
 
-<ul>
- 
 
-</ul>
+
 <div className="account">
   <ul>
     <li>

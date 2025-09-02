@@ -16,8 +16,12 @@ function App(){
         rel="noopener noreferrer"
         className="whatsapp-float"
       >
-        <img src="logo.jpg"/>
-        <span>تواصل معنا</span>
+        <img src="#"/>
+        <span>
+          اضغط
+      للتواصل معنا  
+
+        </span>
         <i className="fa fa-whatsapp"></i>
       </a>
 <Footer/>

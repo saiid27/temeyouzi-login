@@ -22,7 +22,7 @@ function Home(){
       {/* 2) SD (CTA خفيف/معلومة) */}
       <section id="sd">
         <div className="container">
-          <div className="h3">نتائج باكالوريا2025 </div>
+          <div className="h3">نتائج  الباكالوريا 2025 الدورة العادية </div>
           <p>   يمكنك البحث عن نتيجتك بالإسم او رقم الجلوس </p>
           <div className="mt-2">
             <a href="https://www.temeyouzi.site/p/blog-page_27.html" className="btn red">الدخول إلي صفحة البحث</a>
@@ -32,7 +32,7 @@ function Home(){
       {/* 3) SD (CTA خفيف/معلومة) */}
       <section id="sd">
         <div className="container">
-          <div className="h3">نتائج باكالوريا2025 الد </div>
+          <div className="h3">نتائج  الباكالوريا 2025 الدورة التكميلية </div>
           <p>   يمكنك البحث عن نتيجتك بالإسم او رقم الجلوس </p>
           <div className="mt-2">
             <a href="https://www.temeyouzi.site/p/session-complementaire.html" className="btn red">الدخول إلي صفحة البحث</a>

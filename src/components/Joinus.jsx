@@ -5,7 +5,7 @@ function Joinus() {
     <div className="content">
         <p className="text-primary">دوراتنا</p>
         <h2> الدورة الصيفية</h2>
-      <img  src="les-prof.jpg" alt="go" />
+      <img  src="les-prof.jpg" alt="go"  className="prof-img"/>
        
     </div>
     

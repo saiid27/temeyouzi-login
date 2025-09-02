@@ -1,11 +1,13 @@
-import { CiLogin } from "react-icons/ci";
+import { HiOutlineLogin } from "react-icons/hi";
+import { FaAddressBook } from "react-icons/fa";
 
 function Header(){
   return (
      <header id="header">
     <nav className="navbar">
 
-<a href="#" className="logo">temeyouzi | تميزي</a>
+<a href="#" className="logo"> تميزي | temeyouzi</a>
+
 <ul>
  
 
@@ -13,11 +15,16 @@ function Header(){
 <div className="account">
   <ul>
     <li>
-  <a href="#">تسجيل الدخول<CiLogin /></a>
+  <a href="#"><HiOutlineLogin />
+  
+  تسجيل الدخول</a>
   </li>
 
   <li>
-  <a href="#" className="btn-join">اشترك الان</a>
+  <a href="#" className="btn-join">
+  <FaAddressBook />
+  
+  اشترك الان</a>
   </li>
   </ul>
 </div>

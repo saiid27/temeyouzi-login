@@ -4,41 +4,58 @@ function Home(){
       {/* 1) HERO */}
       <section id="home">
         <div className="container">
+          
           <div className="home-header">
+            
             <span>انضم إلينا</span>
-            <h1>أفضل فرص التعلم</h1>
-            <p>منصّة تميّزي توفر دروسًا منظمة ونتائج الامتحانات بشكل بسيط وسريع.</p>
-            <a href="#join-us" className="btn btn-red">ابدأ الآن</a>
-            <a href="#features" className="btn btn-transparent">اعرف المزيد</a>
+            <h1>دروس تعليم عن بعد </h1>
+            <p>
+              دروس موثقة بالصوت والصورة ,دقة عالية ,تمارين مع حلول ,دعم مستمر
+               </p>
+               <p>7D , 7O , 4AS</p>
+            <a href="#" className="btn btn-red">ابدأ الآن</a>
+            <a href="#" className="btn btn-transparent">اعرف المزيد</a>
           </div>
         </div>
       </section>
 
-      {/* 2) FEATURES */}
-      <section id="features">
+      {/* 5) SD (CTA خفيف/معلومة) */}
+      <section id="sd">
         <div className="container">
-          <div className="features-head">
-            <h2>ماذا نقدّم؟</h2>
-            <p>أدوات سهلة، دروس منظّمة، ونتائج محدثة باستمرار.</p>
+          <div className="h3">نتائج باكالوريا2025 </div>
+          <p>   يمكنك البحث عن نتيجتك بالإسم او رقم الجلوس </p>
+          <div className="mt-2">
+            <a href="https://www.temeyouzi.site/p/blog-page_27.html" className="btn red">الدخول إلي صفحة البحث</a>
           </div>
-
-          <div className="features-grid">
-            <div className="card">
-              <h3>دروس منظّمة</h3>
-              <p>محتوى واضح مع ملخّصات وأمثلة وتمارين لكل مستوى.</p>
-            </div>
-            <div className="card">
-              <h3>نتائج فورية</h3>
-              <p>اطّلع على نتائج باكالوريا/إبريفة/كونكور بمجرد صدورها.</p>
-            </div>
-            <div className="card">
-              <h3>واجهة بسيطة</h3>
-              <p>تجربة استخدام سريعة ومناسبة لكل أحجام الشاشات.</p>
-            </div>
-            <div className="card">
-              <h3>دعم مستمر</h3>
-              <p>نساعدك في كل خطوة، من التسجيل وحتى التخرج.</p>
-            </div>
+        </div>
+      </section>
+      {/* 5) SD (CTA خفيف/معلومة) */}
+      <section id="sd">
+        <div className="container">
+          <div className="h3">نتائج باكالوريا2025 الد </div>
+          <p>   يمكنك البحث عن نتيجتك بالإسم او رقم الجلوس </p>
+          <div className="mt-2">
+            <a href="https://www.temeyouzi.site/p/session-complementaire.html" className="btn red">الدخول إلي صفحة البحث</a>
+          </div>
+        </div>
+      </section>
+      {/* 6) SD (CTA خفيف/معلومة) */}
+     <section id="sd">
+        <div className="container">
+          <div className="h3">نتائج إبريفة2025 </div>
+          <p>   يمكنك البحث عن نتيجتك بالإسم او رقم الجلوس </p>
+          <div className="mt-2">
+            <a href="https://www.temeyouzi.site/p/blog-page.html" className="btn red">الدخول إلي صفحة البحث</a>
+          </div>
+        </div>
+      </section>
+       {/* 7) SD (CTA خفيف/معلومة) */}
+     <section id="sd">
+        <div className="container">
+          <div className="h3">نتائج كونكور 2025 </div>
+          <p>   يمكنك البحث عن نتيجتك بالإسم او رقم الجلوس </p>
+          <div className="mt-2">
+            <a href="#" className="btn red">الدخول إلي صفحة البحث</a>
           </div>
         </div>
       </section>
@@ -47,26 +64,18 @@ function Home(){
       <section id="join-us">
         <div className="container">
           <div className="content">
-            <div className="h2">انضم إلى تميّزي اليوم</div>
-            <p>ابدأ رحلتك التعليمية مع أدواتنا البسيطة والمباشرة.</p>
+            <div className="h2">  امتحانات سابقة </div>
+            <p>  brévet 2016 , Bac 2016 ....bac 2024 , brévet 2024</p>
             <div className="mt-2">
-              <a href="#" className="btn sky">إنشاء حساب</a>
-              <a href="#" className="btn outline">تجربة سريعة</a>
+              <a href="#" className="btn sky">دخول </a>
+             
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* 4) SD (CTA خفيف/معلومة) */}
-      <section id="sd">
-        <div className="container">
-          <div className="h3">جاهز تبدأ؟</div>
-          <p>تمَيَّزي — تعلّم بذكاء وبأقل جهد.</p>
-          <div className="mt-2">
-            <a href="#" className="btn red">ابدأ الآن</a>
           </div>
         </div>
       </section>
+      
+     
     </>
   );
 }

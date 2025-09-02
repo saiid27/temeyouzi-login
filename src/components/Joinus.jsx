@@ -1,10 +1,11 @@
+
 function Joinus() {
   return(
    <section id="join-us">
     <div className="content">
-        <p className="text-primary">paractice advice</p>
-        <h2>join us</h2>
-        <p>gjhgjhghjgjhgjhgjhghjg vgvgvgvgv bbhbhbhbhb</p>
+        <p className="text-primary">دوراتنا</p>
+        <h2> الدورة الصيفية</h2>
+      <img  src="les-prof.jpg" alt="go" />
        
     </div>
     

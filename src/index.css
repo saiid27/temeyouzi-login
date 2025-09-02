@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap');
 
+
+
 /* ====== Reset ====== */
 *{ margin:0; padding:0; box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
@@ -120,17 +122,20 @@ a{ text-decoration:none; color:inherit; }
   background:#fff;
   padding: 3.5rem 0;
   color: var(--text);
+  background-color: var(--dark-blue);
 }
 #features .features-head{
   text-align:center;
   margin-bottom: 1.8rem;
   padding: 0 1rem;
+  color: #fff;
 }
 #features .features-head h2{
   font-size: clamp(22px, 4.5vw, 32px);
   font-weight: 900;
   color: var(--dark-blue);
   letter-spacing:.3px;
+  color: #fff;
 }
 #features .features-head p{
   color: var(--muted);
@@ -144,33 +149,9 @@ a{ text-decoration:none; color:inherit; }
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   padding: 0 1rem;
+  background-color: #252B42;
 }
 
-/* Cards */
-.card{
-  border-radius: 12px;
-  padding: 18px;
-  border: 1px solid var(--border);
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,.05);
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-.card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(0,0,0,.08);
-  border-color: #dfe3ea;
-}
-.card h3{
-  font-size: 18px;
-  color: var(--dark-blue);
-  margin-bottom: 8px;
-  font-weight: 900;
-}
-.card p{
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.6;
-}
 
 /* ====== Section: Join Us ====== */
 #join-us{ background:var(--dark-blue); padding:4.5rem 0; }
@@ -234,4 +215,108 @@ a{ text-decoration:none; color:inherit; }
   .navbar ul li a{ padding:8px 8px; }
   #home .home-header .btn{ width:100%; }
   .account a{ padding:7px 10px; }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;   /* كان مكتوب 100mvh */
+  text-align: center;
+}
+
+.content img{
+  max-width: 200px;
+  margin-top: 20px;
+}
+
+
+/* ====== FIX: إزالة الشريط الأبيض ومنع التمدد ====== */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;            /* يمنع أي تمرير أفقي */
+}
+
+/* عناصر الجذر قد تُنشئ overflow عند الـgap/RTL */
+#root, body > * {
+  overflow-x: clip;
+}
+
+/* توحيد الخلفية الداكنة لتطابق الأقسام */
+body {
+  background: var(--dark-blue);
+}
+
+/* لا تسمح للحاويات والشبكات أن تفرض عرضًا أكبر */
+.container, .navbar, .navbar ul, .account, .features-grid,
+#home .home-header, #join-us .content, #sd {
+  min-width: 0;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* أي وسائط قد تتمدّد */
+img, video, svg, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;   /* المسافة من الأسفل */
+  right: 20px;    /* المسافة من اليمين */
+  background-color: #25D366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  text-decoration: none;
+  animation: pulse 1.5s infinite; /* أنيميشن نبض */
+}
+
+.whatsapp-icon {
+  color: white;
+ 
+  font-size: 32px;
+}
+
+/* تأثير عند المرور */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+span{
+  color: #fff;
+}
+
+/* أنيميشن النبض */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }

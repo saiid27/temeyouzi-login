@@ -18,8 +18,8 @@ function App(){
       >
        
         <span>
-          اضغط
-      للتواصل معنا  
+          
+      تواصل معنا  
 
         </span>
         <i className="fa fa-whatsapp"></i>

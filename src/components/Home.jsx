@@ -1,3 +1,5 @@
+
+
 function Home(){
   return (
     <>
@@ -7,7 +9,9 @@ function Home(){
           
           <div className="home-header">
             
-            <span>انضم إلينا</span>
+            <span>انضم إلينا
+              
+</span>
             <h1>دروس تعليم عن بعد </h1>
             <p>
               دروس موثقة بالصوت والصورة ,دقة عالية ,تمارين مع حلول ,دعم مستمر

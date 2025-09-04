@@ -276,12 +276,12 @@ img, video, svg, canvas {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;   /* المسافة من الأسفل */
-  right: 20px;    /* المسافة من اليمين */
+  bottom: 15px;   /* المسافة من الأسفل */
+  right: 15px;    /* المسافة من اليمين */
   background-color: #25D366;
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,7 +294,7 @@ img, video, svg, canvas {
 .whatsapp-icon {
   color: white;
  
-  font-size: 3px;
+  font-size: 4px;
 }
 
 /* تأثير عند المرور */
@@ -304,6 +304,8 @@ img, video, svg, canvas {
 span{
   color: #fff;
    text-align: center;
+   
+
 }
 
 /* أنيميشن النبض */
